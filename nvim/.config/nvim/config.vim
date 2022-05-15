@@ -1,17 +1,32 @@
+set exrc
+
+set relativenumber
+set nu
+
+set hidden
+set noerrorbells
+
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nowrap
+
 set showmatch
 set showcmd
 
-set noswapfile
-
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set smarttab
 set shiftround
 set autoindent
-set smartindent
+
+set colorcolumn=80
 set signcolumn=yes
+
 " sane search
 set ignorecase
 set smartcase
@@ -20,13 +35,7 @@ set incsearch
 
 set backspace=indent,eol,start
 
-:set number relativenumber
-
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+set scrolloff=8
 
 augroup CursorLine
   au!
@@ -57,24 +66,31 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 call plug#begin('~/.vim/plugged')
-Plug 'tomasiser/vim-code-dark'
+    Plug 'tomasiser/vim-code-dark'
 
-Plug 'windwp/nvim-autopairs'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-Plug 'onsails/lspkind-nvim'
+    Plug 'windwp/nvim-autopairs'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'nvim-treesitter/nvim-treesitter'
 
-Plug 'jesseleite/vim-noh'
+    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+    Plug 'onsails/lspkind-nvim'
+
+    Plug 'jesseleite/vim-noh'
 call plug#end()
 
 colorscheme codedark
+let mapleader = " "
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep for > ")})<CR>
 
 " from hammer
 nnoremap <C-j> :m .+1<CR>==
@@ -86,6 +102,4 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 noremap n nzz
 noremap N Nzz
-
-set scrolloff=8
 
