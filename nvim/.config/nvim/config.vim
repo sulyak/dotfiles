@@ -86,11 +86,26 @@ call plug#begin('~/.vim/plugged')
     Plug 'onsails/lspkind-nvim'
 
     Plug 'jesseleite/vim-noh'
+
+    Plug 'andweeb/presence.nvim'
 call plug#end()
 
 colorscheme codedark
 let mapleader = " "
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep for > ")})<CR>
+nnoremap <leader>ff :Telescope find_files<CR>
+nnoremap <leader>ps :Telescope live_grep<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>q :tabclose<CR>
+
+nnoremap <leader>1 :tabn1<CR>
+nnoremap <leader>2 :tabn2<CR>
+nnoremap <leader>3 :tabn3<CR>
+nnoremap <leader>4 :tabn4<CR>
+nnoremap <leader>5 :tabn5<CR>
+nnoremap <leader>6 :tabn6<CR>
+nnoremap <leader>7 :tabn7<CR>
+nnoremap <leader>8 :tabn8<CR>
+nnoremap <leader>9 :tabn9<CR>
 
 " from hammer
 nnoremap <C-j> :m .+1<CR>==
