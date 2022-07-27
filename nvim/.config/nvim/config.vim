@@ -97,6 +97,13 @@ nnoremap <leader>ps :Telescope live_grep<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :tabclose<CR>
 
+" forbidden magic
+set mouse=a
+
+" for terminal mode
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-w> <C-\><C-n><C-w>
+
 " better tab navigation
 nnoremap <tab> <C-PageDown>
 nnoremap <S-tab> <C-PageUp>
