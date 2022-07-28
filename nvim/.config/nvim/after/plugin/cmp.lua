@@ -1,4 +1,4 @@
-local cmp = require('cmp')
+local cmp = require("cmp")
 
 local t = function(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -10,7 +10,6 @@ local check_back_space = function()
 end
 
 cmp.setup {
-
     formatting = {
         format = function(entry, vim_item)
             -- fancy icons and a name of kind
@@ -43,7 +42,7 @@ cmp.setup {
             }),
     },
     sources = {
-        {name = 'buffer'}, {name = 'nvim_lsp'}, {name = "ultisnips"}, {name = 'nvim_lsp_signature_help'}
+        {name = 'buffer'}, {name = 'nvim_lsp'}, {name = 'nvim_lsp_signature_help'}
     },
     completion = {completeopt = 'menu,menuone,noinsert'}
 }
