@@ -52,3 +52,4 @@ PROMPT_COMMAND='set_prompt'
 
 motivate
 alias xlogout='xfce4-session-logout --logout'
+alias ls="exa"
