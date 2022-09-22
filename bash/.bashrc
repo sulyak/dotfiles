@@ -53,3 +53,5 @@ PROMPT_COMMAND='set_prompt'
 motivate
 alias xlogout='xfce4-session-logout --logout'
 alias ls="exa"
+alias mkv="vlc *.mkv"
+alias mp4="vlc *.mp4"
