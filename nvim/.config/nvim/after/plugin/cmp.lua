@@ -17,8 +17,8 @@ cmp.setup {
                                 " " .. vim_item.kind
             -- set a name for each source
             vim_item.menu = ({
-                buffer = "[Buffer]",
                 nvim_lsp = "[LSP]",
+                buffer = "[Buffer]",
                 ultisnips = "[UltiSnips]",
                 look = "[Look]",
                 path = "[Path]",
@@ -29,6 +29,7 @@ cmp.setup {
             return vim_item
         end
     },
+
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -41,8 +42,23 @@ cmp.setup {
                 select = true
             }),
     },
+
+    ghost_text = true,
+
     sources = {
-        {name = 'buffer'}, {name = 'nvim_lsp'}, {name = 'nvim_lsp_signature_help'}
+        { name = 'nvim_lsp', group_index = 1 },
+        { name = 'path', group_index = 1 },
+        { name = 'buffer', keyword_length = 3, group_index = 1 },
+        { name = 'nvim_lsp_signature_help' },
+
     },
-    completion = {completeopt = 'menu,menuone,noinsert'}
+    completion = {completeopt = 'menu,menuone,noinsert'},
 }
+
+cmp.setup.cmdline(':', {
+    sources = { name = 'cmdline'},
+})
+
+cmp.setup.cmdline('/', {
+    sources = {name = 'buffer'},
+})
