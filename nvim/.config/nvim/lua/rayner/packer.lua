@@ -15,23 +15,24 @@ return require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
 
     -- autopair
     use 'windwp/nvim-autopairs'
 
-    -- lsp
-    use 'williamboman/nvim-lsp-installer'
+    -- lsp -> mason
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind.nvim'
 
     -- pls no highlight how is this not built in
     use 'jesseleite/vim-noh'
 
-    -- meow
-    use 'feline-nvim/feline.nvim'
+    -- line
+    use 'nvim-lualine/lualine.nvim'
 
     -- discord presence :)
     use 'andweeb/presence.nvim'

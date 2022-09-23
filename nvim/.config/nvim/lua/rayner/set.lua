@@ -48,4 +48,4 @@ set.guicursor = ""
 -- forbidden magic
 set.mouse = "a"
 
-set.signcolumn="yes"
+set.signcolumn="yes:1"
