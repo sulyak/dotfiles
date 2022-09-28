@@ -59,3 +59,15 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline',  max_item_count = 10, keyword_length = 3},
     }
 })
+
+-- setting up autopairs
+local ok, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
+if not ok then
+    vim.notify('Error loading nvim-autopairs.complettion.cmp.', 'error')
+    return
+end
+
+cmp.event:on (
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)

@@ -31,6 +31,11 @@ return require('packer').startup(function()
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
+    -- autopairs
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('nvim-autopairs').setup {} end
+    }
 
     -- theming
     use 'folke/tokyonight.nvim'
