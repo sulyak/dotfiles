@@ -1,0 +1,14 @@
+font:
+  normal:
+    family: SauceCodePro Nerd Font
+    style: Mono
+
+  bold:
+    family: SauceCodePro Nerd Font
+    style: Bold
+
+  italic:
+    family: SauceCodePro Nerd Font
+    style: Italic
+
+  size: 17.0
