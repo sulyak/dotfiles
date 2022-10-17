@@ -1,25 +1,61 @@
-import:
-  - ~/.config/alacritty/font.yml
-  - ~/.config/alacritty/shell.yml
-  - ~/.config/alacritty/window.yml
-  - ~/.config/alacritty/tokyonight_night.yml
-
+colors:
+  bright:
+    black: '0x414868'
+    blue: '0x7aa2f7'
+    cyan: '0x7dcfff'
+    green: '0x9ece6a'
+    magenta: '0xbb9af7'
+    red: '0xf7768e'
+    white: '0xc0caf5'
+    yellow: '0xe0af68'
+  indexed_colors:
+  - color: '0xff9e64'
+    index: 16
+  - color: '0xdb4b4b'
+    index: 17
+  normal:
+    black: '0x15161e'
+    blue: '0x7aa2f7'
+    cyan: '0x7dcfff'
+    green: '0x9ece6a'
+    magenta: '0xbb9af7'
+    red: '0xf7768e'
+    white: '0xa9b1d6'
+    yellow: '0xe0af68'
+  primary:
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
+cursor:
+  blinking: On
 env:
   TERM: alacritty
-
+font:
+  bold:
+    family: ComicCodeLigatures Nerd Font
+    style: SemiBold
+  italic:
+    family: ComicCodeLigatures Nerd Font
+    style: Italic
+  normal:
+    family: ComicCodeLigatures Nerd Font
+    style: Regular
+  size: 17.0
+live_config_reload: true
+mouse:
+  hide_when_typing: true
+persistent_logging: false
 scrolling:
   history: 10000
   multiplier: 3
-
 selection:
   save_to_clipboard: false
-
-cursor:
-  blinking: On
-
-mouse:
-  hide_when_typing: true
-
-live_config_reload: true
-
-persistent_logging: false
+window:
+  opacity: 1
+  startup_mode: Maximized
+  dynamic_title: true
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - tmux new -As 

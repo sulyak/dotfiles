@@ -1,0 +1,15 @@
+
+font:
+  normal:
+    family: MonoLisa
+    style: Mono
+
+  bold:
+    family: MonoLisa
+    style: Bold
+
+  italic:
+    family: MonoLisa
+    style: Italic
+
+  size: 17.0

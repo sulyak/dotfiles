@@ -1,0 +1,15 @@
+
+font:
+  normal:
+    family: ComicCodeLigatures
+    style: Light
+
+  bold:
+    family: ComicCodeLigatures
+    style: Bold
+
+  italic:
+    family: ComicCodeLigatures
+    style: Italic
+
+  size: 17.0

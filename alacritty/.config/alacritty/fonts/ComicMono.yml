@@ -1,0 +1,15 @@
+
+font:
+  normal:
+    family: Comic Mono
+    style: Light
+
+  bold:
+    family: Comic Mono
+    style: Bold
+
+  italic:
+    family: Comic Mono
+    style: Italic
+
+  size: 17.0

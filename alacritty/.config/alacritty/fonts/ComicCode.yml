@@ -1,0 +1,15 @@
+
+font:
+  normal:
+    family: ComicCodeLigatures Nerd Font
+    style: Regular
+
+  bold:
+    family: ComicCodeLigatures Nerd Font
+    style: SemiBold
+
+  italic:
+    family: ComicCodeLigatures Nerd Font
+    style: Italic
+
+  size: 17.0
