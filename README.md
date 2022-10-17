@@ -1,11 +1,25 @@
 # dotfiles
 
-Repository containing my dotfiles. 
+Rayner's dotfiles.
 
 ### Requirements
-* stow: `# pacman -S stow`
 
-### Instalation
+ * stow:
+ > Arch Linux install:
+ ```
+ # pacman -S stow
+ ```
 
-`$ cd dotfiles`
-`$ ./install.sh`
+### Installation
+
+```shell
+git clone https://github.com/sulyak/dotfiles && cd dotfiles
+make stow
+```
+
+### Uninstallation 
+
+> In the repo's root dir
+```
+$ make unstow
+```
