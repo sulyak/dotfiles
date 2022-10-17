@@ -37,12 +37,27 @@ return require('packer').startup(function()
         config = function() require('nvim-autopairs').setup {} end
     }
 
+    -- treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
+
+    -- noh
+    use 'jesseleite/vim-noh'
+
     -- theming
     use 'folke/tokyonight.nvim'
     use 'nvim-lualine/lualine.nvim'
     use 'kyazdani42/nvim-web-devicons'
-    
+
     if packer_bootstrap then
-	require('packer').sync()
+        require('packer').sync()
     end
 end)
