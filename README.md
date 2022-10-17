@@ -4,11 +4,11 @@ Rayner's dotfiles.
 
 ### Requirements
 
- * stow:
- > Arch Linux install:
- ```
- # pacman -S stow
- ```
+* stow:
+> Arch Linux install:
+```
+sudo pacman -S stow
+```
 
 ### Installation
 
@@ -21,5 +21,5 @@ make stow
 
 > In the repo's root dir
 ```
-$ make unstow
+make unstow
 ```
