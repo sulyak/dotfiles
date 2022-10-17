@@ -1,4 +1,5 @@
 
 /nvim/.config/nvim/plugin/
+/nvim/.config/nvim/spell/
 *.old
 *.log
