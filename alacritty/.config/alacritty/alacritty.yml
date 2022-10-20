@@ -49,13 +49,13 @@ scrolling:
   multiplier: 3
 selection:
   save_to_clipboard: false
+shell:
+  args:
+  - -l
+  - -c
+  - tmux new -As
+  program: /bin/bash
 window:
+  dynamic_title: true
   opacity: 1
   startup_mode: Maximized
-  dynamic_title: true
-shell:
-  program: /bin/bash
-  args:
-    - -l
-    - -c
-    - tmux new -As 
