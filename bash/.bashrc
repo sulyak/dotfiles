@@ -32,14 +32,9 @@ set_prompt()
    local txtwhite='$(tput setaf 7)'
 
    # git branch
-   PS1="\[$txtwhite\]$(__git_ps1 '(%s) ')"
+    PS1="\[$txtwhite\]$(__git_ps1 '(%s) ')"
 
-   # User color: red for root, cyan for others
-   if [[ $EUID == 0 ]]; then
-       PS1+="\[$txtred\]"
-   else
-       PS1+="\[$txtcyan\]"
-   fi
+    PS1+="\[$txtcyan\]"
 
     # user
     PS1+="\[$txtbold\]\u\[$txtreset\]"
@@ -51,10 +46,16 @@ set_prompt()
 PROMPT_COMMAND='set_prompt'
 
 motivate
-alias xlogout='xfce4-session-logout --logout'
-alias ls="exa"
 alias mkv="vlc *.mkv"
 alias mp4="vlc *.mp4"
+
+alias ls="exa"
+alias ll="exa -lha"
+alias tree="exa --tree"
+
+alias grep="rg"
+
+alias cat="bat"
 
 alias vi="nvim"
 alias vim="nvim"
