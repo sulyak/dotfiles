@@ -1,30 +1,28 @@
 colors:
   bright:
-    black: '0x414868'
-    blue: '0x7aa2f7'
-    cyan: '0x7dcfff'
-    green: '0x9ece6a'
-    magenta: '0xbb9af7'
-    red: '0xf7768e'
-    white: '0xc0caf5'
-    yellow: '0xe0af68'
-  indexed_colors:
-  - color: '0xff9e64'
-    index: 16
-  - color: '0xdb4b4b'
-    index: 17
+    black: '0x6f6f6f'
+    blue: '0xc2e3ff'
+    cyan: '0xc0e9f8'
+    green: '0xd6fcba'
+    magenta: '0xffc6ff'
+    red: '0xfe978b'
+    white: '0xffffff'
+    yellow: '0xfffed5'
+  cursor:
+    background: '0xf0f0f0'
+    foreground: '0x26282a'
   normal:
-    black: '0x15161e'
-    blue: '0x7aa2f7'
-    cyan: '0x7dcfff'
-    green: '0x9ece6a'
-    magenta: '0xbb9af7'
-    red: '0xf7768e'
-    white: '0xa9b1d6'
-    yellow: '0xe0af68'
+    black: '0x26282a'
+    blue: '0x8bbce5'
+    cyan: '0xa2e1f8'
+    green: '0xb4fb73'
+    magenta: '0xffb2fe'
+    red: '0xff8878'
+    white: '0xf1f1f1'
+    yellow: '0xfffcb7'
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
+    background: '0x26282a'
+    foreground: '0xf0f0f0'
 cursor:
   blinking: On
 env:
