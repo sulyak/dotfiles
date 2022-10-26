@@ -1,6 +1,8 @@
 local nnoremap = require("rayner.keymap").nnoremap
 local inoremap = require("rayner.keymap").inoremap
 local tnoremap = require("rayner.keymap").tnoremap
+local vnoremap = require("rayner.keymap").vnoremap
+local xnoremap = require("rayner.keymap").xnoremap
 
 nnoremap("<leader>", " ")
 
@@ -27,9 +29,17 @@ inoremap('"', '"<c-g>u')
 nnoremap("n", "nzz")
 nnoremap("N", "Nzz")
 
--- lsp
-nnoremap("<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>")
-nnoremap("<leader>lp", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
+-- navigation
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
+-- greatest remap ever
+xnoremap("<leader>p", "\"_dP")
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+
+nnoremap("<leader>d", "\"_d")
+vnoremap("<leader>d", "\"_d")
 
 -- telescope
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
