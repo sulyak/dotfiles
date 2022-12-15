@@ -2,9 +2,8 @@ local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
     if fn.empty(fn.glob(install_path)) > 0 then
-	fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-	vim.cmd [[packadd packer.nvim]]
-	return true
+        fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}) vim.cmd [[packadd packer.nvim]]
+        return true
     end
     return false
 end
@@ -26,8 +25,6 @@ return require('packer').startup(function()
     -- lsp
     use 'onsails/lspkind.nvim'
     use 'neovim/nvim-lspconfig'
-
-    -- mason
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
 
@@ -56,6 +53,19 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
     use 'nvim-lualine/lualine.nvim'
     use 'kyazdani42/nvim-web-devicons'
+    use {
+        'kdheepak/tabline.nvim',
+        config = function() require('tabline').setup() end,
+    }
+    use {
+        'petertriho/nvim-scrollbar',
+        config = function() require('scrollbar').setup() end,
+    }
+
+    -- rust tools 👀
+    use 'simrat39/rust-tools.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'mfussenegger/nvim-dap'
 
     if packer_bootstrap then
         require('packer').sync()

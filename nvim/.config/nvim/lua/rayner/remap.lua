@@ -45,3 +45,8 @@ vnoremap("<leader>d", "\"_d")
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<CR>")
 nnoremap("<leader>fd", "<cmd>Telescope diagnostics<CR>")
+
+-- tabs
+nnoremap("<C-t>", "<cmd>tabnew<CR>")
+nnoremap("<tab>", "<cmd>tabnext<CR>")
+nnoremap("<S-tab>", "<cmd>tabprevious<CR>")
