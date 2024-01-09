@@ -1,0 +1,35 @@
+[user]
+	email = raynersulyak@gmail.com
+	name = Rayner Sulyak
+[core]
+	excludesFile = ~/.gitignore
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+[init]
+	defaultBranch = main
+[alias]
+	# https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+	# sync and init submodules
+	recursive = "!r() { git submodule sync --recursive && git submodule update --init --recursive; }; r"
+	whatadded = log --diff-filter=A
+
+[url "git@gitlab.com:"]
+    insteadOf = https://gitlab.com/
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[diff]
+	tool = vimdiff3
+	algorithm = histogram
+
+[difftool "vimdiff3"]
+	path = nvim
+[merge]
+	tool = vimdiff3
+[mergetool "vimdiff3"]
+	path = nvim
+
+[mergetool]
+	keepBackup = false

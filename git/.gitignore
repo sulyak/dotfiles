@@ -1,0 +1,6 @@
+.ccls-cache/
+compile_commands.json
+.cache/
+__pycache__/
+Pip
+Pipfile/
