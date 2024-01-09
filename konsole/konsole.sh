@@ -5,7 +5,7 @@
 
 
 win_class="konsole.konsole"
-launch_new="konsole -e tmux new-session -A -s main"
+launch_new="konsole -e tmux -2 new-session -A -s main"
 launch_old="wmctrl -x -a konsole.konsole &"
 
 instances_curr=$(wmctrl -l -x | grep "$win_class")
