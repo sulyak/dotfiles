@@ -9,6 +9,14 @@ fi
 
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
 
+# Display a list of the matching files
+bind "set show-all-if-ambiguous on"
+
+# Perform partial completion on the first Tab press,
+# only start cycling full results on the second Tab press
+bind 'TAB':menu-complete
+bind "set menu-complete-display-prefix on"
+
 ## Use the up and down arrow keys for finding a command in history
 ## (you can write some initial letters of the command first).
 bind '"\e[A":history-search-backward'
@@ -122,10 +130,15 @@ if checkcommand nvim &> /dev/null; then
     alias nano='nvim'
 fi
 
-if checkcommand exa &> /dev/null; then
-    alias ls="exa"
-    alias ll="exa -lha"
-    alias tree="exa --tree"
+if  which exa > /dev/null 2>&1; then
+	alias ls="exa --git-ignore"
+	alias ll="exa --git-ignore --git -l --group"
+	alias la="exa --git -la"
+    alias tree="exa --tree --git-ignore"
+else
+	alias ls="ls --color=always"
+	alias ll="ls -l"
+	alias la="ls -lA"
 fi
 
 if checkcommand rg &> /dev/null; then
