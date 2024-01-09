@@ -50,7 +50,8 @@ return require('packer').startup(function()
     use 'jesseleite/vim-noh'
 
     -- theming
-    use 'folke/tokyonight.nvim'
+    -- use 'folke/tokyonight.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
     use 'nvim-lualine/lualine.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use {
@@ -66,6 +67,10 @@ return require('packer').startup(function()
     use 'simrat39/rust-tools.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'mfussenegger/nvim-dap'
+
+    -- tmux
+    
+    use 'christoomey/vim-tmux-navigator'
 
     if packer_bootstrap then
         require('packer').sync()

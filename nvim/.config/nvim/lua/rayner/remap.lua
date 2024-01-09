@@ -50,3 +50,9 @@ nnoremap("<leader>fd", "<cmd>Telescope diagnostics<CR>")
 nnoremap("<C-t>", "<cmd>tabnew<CR>")
 nnoremap("<tab>", "<cmd>tabnext<CR>")
 nnoremap("<S-tab>", "<cmd>tabprevious<CR>")
+
+-- vim-tmux-navigator
+nnoremap("<M-l>", "<cmd>TmuxNavigateRight<CR>")
+nnoremap("<M-h>", "<cmd>TmuxNavigateLeft<CR>")
+nnoremap("<M-k>", "<cmd>TmuxNavigateUp<CR>")
+nnoremap("<M-j>", "<cmd>TmuxNavigateDown<CR>")
