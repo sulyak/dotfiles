@@ -1,9 +1,9 @@
 local cmd = vim.api.nvim_create_user_command
 
 -- yes please
-cmd('WQ', 'wq', {})
+cmd('WQ', 'wq', {bang=true})
 cmd('Wq', 'wq', {})
 cmd('Wa', 'wa', {})
-cmd('WA', 'wa', {})
-cmd('W', 'w', {})
-cmd('Q', 'q', {})
+cmd('WA', 'wa', {bang=true})
+cmd('W', 'w', {bang=true})
+cmd('Q', 'q', {bang=true})
