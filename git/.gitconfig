@@ -14,18 +14,14 @@
 	recursive = "!r() { git submodule sync --recursive && git submodule update --init --recursive; }; r"
 	whatadded = log --diff-filter=A
 
+    fortune = "! git commit -m "\"$(fortune)\"" "
+
 [url "git@gitlab.com:"]
     insteadOf = https://gitlab.com/
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
 
-[diff]
-	tool = vimdiff3
-	algorithm = histogram
-
-[difftool "vimdiff3"]
-	path = nvim
 [merge]
 	tool = vimdiff3
 [mergetool "vimdiff3"]
@@ -33,3 +29,25 @@
 
 [mergetool]
 	keepBackup = false
+
+[diff]
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+    difftool = true
+
+[alias]
+    dft = difftool
+
+[alias]
+        dlog = "!f() { : git log ; GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
+	count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
+
+
+
